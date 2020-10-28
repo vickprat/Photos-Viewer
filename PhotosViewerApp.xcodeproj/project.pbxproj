@@ -13,6 +13,8 @@
 		353F7FA525484D9D001644B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353F7FA325484D9D001644B2 /* LaunchScreen.storyboard */; };
 		353F7FB025484D9D001644B2 /* PhotosViewerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F7FAF25484D9D001644B2 /* PhotosViewerAppTests.swift */; };
 		353F7FBB25484D9D001644B2 /* PhotosViewerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F7FBA25484D9D001644B2 /* PhotosViewerAppUITests.swift */; };
+		353F80092548558A001644B2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F80082548558A001644B2 /* APIClient.swift */; };
+		353F801125485836001644B2 /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F801025485836001644B2 /* APIEndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		353F7FB625484D9D001644B2 /* PhotosViewerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotosViewerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		353F7FBA25484D9D001644B2 /* PhotosViewerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewerAppUITests.swift; sourceTree = "<group>"; };
 		353F7FBC25484D9D001644B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		353F80082548558A001644B2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		353F801025485836001644B2 /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 				353F7FA625484D9D001644B2 /* Info.plist */,
 				3527E19525489A5A0001622A /* Resources */,
 				3527E19325489A410001622A /* Application */,
+				353F800625485573001644B2 /* Networking */,
 			);
 			path = PhotosViewerApp;
 			sourceTree = "<group>";
@@ -136,6 +141,15 @@
 				353F7FBC25484D9D001644B2 /* Info.plist */,
 			);
 			path = PhotosViewerAppUITests;
+			sourceTree = "<group>";
+		};
+		353F800625485573001644B2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				353F80082548558A001644B2 /* APIClient.swift */,
+				353F801025485836001644B2 /* APIEndPoint.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				353F7F9925484D9B001644B2 /* AppDelegate.swift in Sources */,
+				353F80092548558A001644B2 /* APIClient.swift in Sources */,
 				3527E189254896440001622A /* SceneDelegate.swift in Sources */,
+				353F801125485836001644B2 /* APIEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
