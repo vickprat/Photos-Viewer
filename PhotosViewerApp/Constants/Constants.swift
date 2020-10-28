@@ -32,5 +32,5 @@ enum Constants {
 //MARK: NetworkAPI Constants
 enum APIConstants {
     static let flickrAPIBaseURL = "https://api.flickr.com"
-    static let flickrAPIKey = "3e7cc266ae2b0e0d78e279ce8e361736"
+    static let flickrAPIKey = "8ccbe2b3188bff9cc1a71c79feb648cc"
 }
