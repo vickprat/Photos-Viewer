@@ -18,6 +18,8 @@
 		353F80092548558A001644B2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F80082548558A001644B2 /* APIClient.swift */; };
 		353F801125485836001644B2 /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F801025485836001644B2 /* APIEndPoint.swift */; };
 		353F801625485A18001644B2 /* PhotoSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F801525485A17001644B2 /* PhotoSearchAPI.swift */; };
+		353F802425485D67001644B2 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F802325485D67001644B2 /* ImageDownloader.swift */; };
+		353F802F25485F03001644B2 /* ImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F802E25485F03001644B2 /* ImageOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		353F80082548558A001644B2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		353F801025485836001644B2 /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
 		353F801525485A17001644B2 /* PhotoSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchAPI.swift; sourceTree = "<group>"; };
+		353F802325485D67001644B2 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		353F802E25485F03001644B2 /* ImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,8 @@
 				353F80082548558A001644B2 /* APIClient.swift */,
 				353F801025485836001644B2 /* APIEndPoint.swift */,
 				353F801525485A17001644B2 /* PhotoSearchAPI.swift */,
+				353F802325485D67001644B2 /* ImageDownloader.swift */,
+				353F802E25485F03001644B2 /* ImageOperation.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -322,11 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353F802425485D67001644B2 /* ImageDownloader.swift in Sources */,
 				353F7F9925484D9B001644B2 /* AppDelegate.swift in Sources */,
 				353F7FD525484F83001644B2 /* PhotoSearchModuleBuilder.swift in Sources */,
 				353F80092548558A001644B2 /* APIClient.swift in Sources */,
 				3527E189254896440001622A /* SceneDelegate.swift in Sources */,
 				353F7FED254850D1001644B2 /* Photos.swift in Sources */,
+				353F802F25485F03001644B2 /* ImageOperation.swift in Sources */,
 				353F801625485A18001644B2 /* PhotoSearchAPI.swift in Sources */,
 				353F801125485836001644B2 /* APIEndPoint.swift in Sources */,
 			);
