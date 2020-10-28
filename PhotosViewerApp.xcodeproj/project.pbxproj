@@ -16,6 +16,7 @@
 		353F7FD525484F83001644B2 /* PhotoSearchModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F7FD425484F83001644B2 /* PhotoSearchModuleBuilder.swift */; };
 		353F7FDE2548507A001644B2 /* PhotoSearchModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F7FDD2548507A001644B2 /* PhotoSearchModuleProtocols.swift */; };
 		353F7FE3254850B3001644B2 /* PhotoSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F7FE2254850B3001644B2 /* PhotoSearchRouter.swift */; };
+		353F7FE8254850C7001644B2 /* PhotoSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F7FE7254850C7001644B2 /* PhotoSearchInteractor.swift */; };
 		353F7FED254850D1001644B2 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F7FEC254850D1001644B2 /* Photos.swift */; };
 		353F80092548558A001644B2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F80082548558A001644B2 /* APIClient.swift */; };
 		353F801125485836001644B2 /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F801025485836001644B2 /* APIEndPoint.swift */; };
@@ -57,6 +58,7 @@
 		353F7FD425484F83001644B2 /* PhotoSearchModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchModuleBuilder.swift; sourceTree = "<group>"; };
 		353F7FDD2548507A001644B2 /* PhotoSearchModuleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchModuleProtocols.swift; sourceTree = "<group>"; };
 		353F7FE2254850B3001644B2 /* PhotoSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchRouter.swift; sourceTree = "<group>"; };
+		353F7FE7254850C7001644B2 /* PhotoSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchInteractor.swift; sourceTree = "<group>"; };
 		353F7FEC254850D1001644B2 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		353F80082548558A001644B2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		353F801025485836001644B2 /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				353F7FDC2548504C001644B2 /* Protocols */,
 				353F7FD125484F39001644B2 /* Entity */,
+				353F7FD025484F31001644B2 /* Interactor */,
 				353F7FCF25484F2C001644B2 /* Router */,
 				353F7FCE25484F27001644B2 /* Builder */,
 			);
@@ -191,6 +194,14 @@
 				353F7FE2254850B3001644B2 /* PhotoSearchRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		353F7FD025484F31001644B2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				353F7FE7254850C7001644B2 /* PhotoSearchInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		353F7FD125484F39001644B2 /* Entity */ = {
@@ -360,6 +371,7 @@
 				353F802F25485F03001644B2 /* ImageOperation.swift in Sources */,
 				353F7FE3254850B3001644B2 /* PhotoSearchRouter.swift in Sources */,
 				353F801625485A18001644B2 /* PhotoSearchAPI.swift in Sources */,
+				353F7FE8254850C7001644B2 /* PhotoSearchInteractor.swift in Sources */,
 				353F801125485836001644B2 /* APIEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
