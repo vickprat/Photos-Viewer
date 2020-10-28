@@ -9,6 +9,12 @@ import Foundation
 import UIKit
 
 
+protocol PhotoSearchPresenterInput: AnyObject {
+    var view: PhotoSearchViewInput? { get set }
+    var interactor: PhotoSearchInteractorInput! { get set }
+    var router: PhotoSearchRouterInput! { get set }
+}
+
 protocol PhotoSearchInteractorInput: AnyObject {
     var presenter: PhotoSearchInteractorOutput? { get set }
     func fetchPhotos(for imageName: String, pageNum: Int)
