@@ -8,6 +8,20 @@
 import Foundation
 import UIKit
 
+protocol PhotoSearchViewInput: AnyObject {
+    var presenter: PhotoSearchViewOutput! { get set }
+    func changeViewState(_ state: ViewState)
+    func displayPhotos(with viewModel: PhotoSearchViewModel)
+    func insertPhotos(with viewModel: PhotoSearchViewModel, at indexPaths: [IndexPath])
+    func resetViews()
+}
+
+protocol PhotoSearchViewOutput: AnyObject {
+    func searchPhotos(with imageName: String)
+    var isMoreDataAvailable: Bool { get }
+    func clearData()
+    func didSelectPhoto(at index: Int)
+}
 
 protocol PhotoSearchPresenterInput: AnyObject {
     var view: PhotoSearchViewInput? { get set }

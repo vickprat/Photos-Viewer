@@ -25,6 +25,11 @@
 		353F801625485A18001644B2 /* PhotoSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F801525485A17001644B2 /* PhotoSearchAPI.swift */; };
 		353F802425485D67001644B2 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F802325485D67001644B2 /* ImageDownloader.swift */; };
 		353F802F25485F03001644B2 /* ImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F802E25485F03001644B2 /* ImageOperation.swift */; };
+		353F803425486426001644B2 /* PhotoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F803325486426001644B2 /* PhotoSearchViewController.swift */; };
+		353F8039254866BD001644B2 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F8038254866BD001644B2 /* PhotoCell.swift */; };
+		353F804C25486808001644B2 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F804B25486808001644B2 /* UIViewController+Extensions.swift */; };
+		353F805125486843001644B2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F805025486843001644B2 /* UIView+Extensions.swift */; };
+		353F805625486BAF001644B2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F805525486BAF001644B2 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,11 @@
 		353F801525485A17001644B2 /* PhotoSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchAPI.swift; sourceTree = "<group>"; };
 		353F802325485D67001644B2 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		353F802E25485F03001644B2 /* ImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOperation.swift; sourceTree = "<group>"; };
+		353F803325486426001644B2 /* PhotoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchViewController.swift; sourceTree = "<group>"; };
+		353F8038254866BD001644B2 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		353F804B25486808001644B2 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		353F805025486843001644B2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		353F805525486BAF001644B2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +151,7 @@
 				3527E19525489A5A0001622A /* Resources */,
 				3527E19325489A410001622A /* Application */,
 				353F7FCB25484EDD001644B2 /* Modules */,
+				353F803D2548678B001644B2 /* Extensions */,
 				353F800625485573001644B2 /* Networking */,
 				353F7FFA254853EC001644B2 /* Constants */,
 			);
@@ -177,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				353F7FDC2548504C001644B2 /* Protocols */,
+				353F7FD325484F50001644B2 /* View */,
 				353F7FD225484F3F001644B2 /* Presenter */,
 				353F7FD125484F39001644B2 /* Entity */,
 				353F7FD025484F31001644B2 /* Interactor */,
@@ -226,6 +238,16 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		353F7FD325484F50001644B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				353F803325486426001644B2 /* PhotoSearchViewController.swift */,
+				353F8038254866BD001644B2 /* PhotoCell.swift */,
+				353F805525486BAF001644B2 /* SearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		353F7FDC2548504C001644B2 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +274,15 @@
 				353F802E25485F03001644B2 /* ImageOperation.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		353F803D2548678B001644B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				353F804B25486808001644B2 /* UIViewController+Extensions.swift */,
+				353F805025486843001644B2 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,15 +414,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353F805125486843001644B2 /* UIView+Extensions.swift in Sources */,
 				353F7FF325485213001644B2 /* PhotoSearchPresenter.swift in Sources */,
 				353F802425485D67001644B2 /* ImageDownloader.swift in Sources */,
 				353F7FDE2548507A001644B2 /* PhotoSearchModuleProtocols.swift in Sources */,
 				353F7F9925484D9B001644B2 /* AppDelegate.swift in Sources */,
+				353F8039254866BD001644B2 /* PhotoCell.swift in Sources */,
 				353F7FD525484F83001644B2 /* PhotoSearchModuleBuilder.swift in Sources */,
 				353F80092548558A001644B2 /* APIClient.swift in Sources */,
 				3527E189254896440001622A /* SceneDelegate.swift in Sources */,
 				353F7FFC254853F8001644B2 /* Constants.swift in Sources */,
 				353F7FED254850D1001644B2 /* Photos.swift in Sources */,
+				353F803425486426001644B2 /* PhotoSearchViewController.swift in Sources */,
+				353F805625486BAF001644B2 /* SearchViewController.swift in Sources */,
+				353F804C25486808001644B2 /* UIViewController+Extensions.swift in Sources */,
 				353F802F25485F03001644B2 /* ImageOperation.swift in Sources */,
 				353F7FE3254850B3001644B2 /* PhotoSearchRouter.swift in Sources */,
 				353F801625485A18001644B2 /* PhotoSearchAPI.swift in Sources */,
