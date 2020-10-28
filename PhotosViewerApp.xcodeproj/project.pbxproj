@@ -15,6 +15,7 @@
 		353F7FBB25484D9D001644B2 /* PhotosViewerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F7FBA25484D9D001644B2 /* PhotosViewerAppUITests.swift */; };
 		353F80092548558A001644B2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F80082548558A001644B2 /* APIClient.swift */; };
 		353F801125485836001644B2 /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F801025485836001644B2 /* APIEndPoint.swift */; };
+		353F801625485A18001644B2 /* PhotoSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F801525485A17001644B2 /* PhotoSearchAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		353F7FBC25484D9D001644B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		353F80082548558A001644B2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		353F801025485836001644B2 /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
+		353F801525485A17001644B2 /* PhotoSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			children = (
 				353F80082548558A001644B2 /* APIClient.swift */,
 				353F801025485836001644B2 /* APIEndPoint.swift */,
+				353F801525485A17001644B2 /* PhotoSearchAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				353F7F9925484D9B001644B2 /* AppDelegate.swift in Sources */,
 				353F80092548558A001644B2 /* APIClient.swift in Sources */,
 				3527E189254896440001622A /* SceneDelegate.swift in Sources */,
+				353F801625485A18001644B2 /* PhotoSearchAPI.swift in Sources */,
 				353F801125485836001644B2 /* APIEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
