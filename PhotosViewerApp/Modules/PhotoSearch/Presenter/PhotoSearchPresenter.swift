@@ -34,14 +34,14 @@ final class PhotoSearchPresenter: PhotoSearchPresenterInput, PhotoSearchViewOutp
     }
 
     func didSelectPhoto(at index: Int) {
-        let imageUrl = photoSearchViewModel.imageUrlAt(index)
-        router.showPhotoDetails(with: imageUrl)
+        let photo = photoSearchViewModel.photos[index]
+        router.showPhotoDetails(with: photo)
     }
 
-    fileprivate func insertMorePhotos(with photoUrlList: [URL]) {
+    fileprivate func insertMorePhotos(with photos: [Photo]) {
         let previousCount = totalCount
-        totalCount += photoUrlList.count
-        photoSearchViewModel.addMorePhotoUrls(photoUrlList)
+        totalCount += photos.count
+        photoSearchViewModel.addMorePhotos(photos)
         let indexPaths: [IndexPath] = (previousCount..<totalCount).map {
             return IndexPath(item: $0, section: 0)
         }
@@ -52,10 +52,8 @@ final class PhotoSearchPresenter: PhotoSearchPresenterInput, PhotoSearchViewOutp
     }
 
     func photoSearchSuccess(_ photos: Photos) {
-        let photoUrlList = buildPhotoUrlList(from: photos.photo)
-        guard !photoUrlList.isEmpty else { return }
         if totalCount == Constants.defaultTotalCount {
-            photoSearchViewModel = PhotoSearchViewModel(photoUrlList: photoUrlList)
+            photoSearchViewModel = PhotoSearchViewModel(with: photos.photo)
             totalCount = photos.photo.count
             totalPages = photos.pages
             DispatchQueue.main.async {
@@ -63,7 +61,7 @@ final class PhotoSearchPresenter: PhotoSearchPresenterInput, PhotoSearchViewOutp
                 self.view?.changeViewState(.content)
             }
         } else {
-            insertMorePhotos(with: photoUrlList)
+            insertMorePhotos(with: photos.photo)
         }
     }
 
@@ -71,15 +69,6 @@ final class PhotoSearchPresenter: PhotoSearchPresenterInput, PhotoSearchViewOutp
         DispatchQueue.main.async {
             self.view?.changeViewState(.error(error.localizedDescription))
         }
-    }
-
-    func buildPhotoUrlList(from photos: [Photo]) -> [URL] {
-        let photoUrlList = photos.compactMap { (photo) -> URL? in
-            let url = "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_z.jpg"
-            guard let imageUrl = URL(string: url) else { return nil }
-            return imageUrl
-        }
-        return photoUrlList
     }
 
     func clearData() {
@@ -94,28 +83,28 @@ final class PhotoSearchPresenter: PhotoSearchPresenterInput, PhotoSearchViewOutp
 
 struct PhotoSearchViewModel {
 
-    var photoUrlList = [URL]()
+    var photos = [Photo]()
 
-    init(photoUrlList: [URL]) {
-        self.photoUrlList = photoUrlList
+    init(with photos: [Photo]) {
+        self.photos = photos
     }
 
     var isEmpty: Bool {
-        return photoUrlList.isEmpty
+        return photos.isEmpty
     }
 
     var photoCount: Int {
-        return photoUrlList.count
+        return photos.count
     }
 
-    mutating func addMorePhotoUrls(_ photoUrls: [URL]) {
-        photoUrlList += photoUrls
+    mutating func addMorePhotos(_ photos: [Photo]) {
+        self.photos += photos
     }
 
-    func imageUrlAt(_ index: Int) -> URL {
-        guard !photoUrlList.isEmpty else {
-            fatalError("No imageUrls available")
-        }
-        return photoUrlList[index]
+    func photoUrlAt(_ index: Int) -> URL? {
+        let photo = photos[index]
+        let url = "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_z.jpg"
+        guard let photoUrl = URL(string: url) else { return nil }
+        return photoUrl
     }
 }

@@ -40,5 +40,5 @@ protocol PhotoSearchInteractorOutput: AnyObject  {
 }
 
 protocol PhotoSearchRouterInput: AnyObject {
-    func showPhotoDetails(with imageUrl: URL)
+    func showPhotoDetails(with photo: Photo)
 }

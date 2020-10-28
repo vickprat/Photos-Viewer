@@ -31,19 +31,20 @@ final class PhotoCell: UICollectionViewCell {
         photoImageView.edges(to: self)
     }
 
-    func configure(imageURL: URL, indexPath: IndexPath) {
+    func configure(photoURL: URL?, indexPath: IndexPath) {
         photoImageView.image = UIImage(named: "placeholderImage")
-        photoImageView.loadImage(with: imageURL, indexPath: indexPath)
+        guard let photoURL = photoURL else { return }
+        photoImageView.loadImage(with: photoURL, indexPath: indexPath)
     }
 }
 
 extension UIImageView {
-    func loadImage(with imageURL: URL, indexPath: IndexPath?) {
+    func loadImage(with photoURL: URL, indexPath: IndexPath?) {
         ImageDownloader.shared.downloadImage(
-            withURL: imageURL,
+            withURL: photoURL,
             indexPath: indexPath,
             completion: { [weak self] (image: UIImage?, resultIndexPath: IndexPath?, url: URL, error: Error?) in
-                if let self = self, let kIndexPath = resultIndexPath, indexPath == kIndexPath, imageURL.absoluteString == url.absoluteString {
+                if let self = self, let kIndexPath = resultIndexPath, indexPath == kIndexPath, photoURL.absoluteString == url.absoluteString {
                     DispatchQueue.main.async {
                         if let downloadedImage = image {
                             self.image = downloadedImage

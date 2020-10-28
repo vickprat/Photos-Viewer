@@ -11,7 +11,7 @@ final class PhotoSearchRouter: PhotoSearchRouterInput {
 
     weak var viewController: UIViewController?
 
-    func showPhotoDetails(with imageUrl: URL) {
+    func showPhotoDetails(with photo: Photo) {
         /*
         let detailVC = PhotoDetailScreenBuilder().build(with: imageUrl)
         viewController?.present(detailVC, animated: true)

@@ -138,8 +138,8 @@ extension PhotoSearchViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as? PhotoCell else { return UICollectionViewCell() }
         guard let viewModel = photoSearchViewModel else { return cell }
-        let imageURL = viewModel.imageUrlAt(indexPath.row)
-        cell.configure(imageURL: imageURL, indexPath: indexPath)
+        let photoURL = viewModel.photoUrlAt(indexPath.row)
+        cell.configure(photoURL: photoURL, indexPath: indexPath)
         return cell
     }
 
@@ -152,8 +152,9 @@ extension PhotoSearchViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let viewModel = photoSearchViewModel else { return }
         guard viewState != .loading, indexPath.row == (viewModel.photoCount - 1) else { return }
-        let imageURL = viewModel.imageUrlAt(indexPath.row)
-        ImageDownloader.shared.changeDownloadPriority(for: imageURL)
+        if let photoURL = viewModel.photoUrlAt(indexPath.row) {
+            ImageDownloader.shared.changeDownloadPriority(for: photoURL)
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
