@@ -24,7 +24,7 @@ final class PhotoSearchViewController: UIViewController, PhotoSearchViewInput, S
     lazy var collectionViewLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         let spacing = Constants.defaultSpacing
-        let itemSize = (UIScreen.main.bounds.width - (Constants.numberOfColumns - spacing) - 2) / Constants.numberOfColumns
+        let itemSize = (UIScreen.main.bounds.width - ((Constants.numberOfColumns + 1) * spacing)) / Constants.numberOfColumns
         layout.itemSize = CGSize(width: itemSize, height: itemSize)
         layout.minimumInteritemSpacing = spacing
         layout.minimumLineSpacing = spacing
