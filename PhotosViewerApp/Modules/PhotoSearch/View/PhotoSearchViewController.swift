@@ -112,7 +112,6 @@ final class PhotoSearchViewController: UIViewController, PhotoSearchViewInput, S
 
     func resetViews() {
         searchController.searchBar.text = nil
-        photoSearchViewModel = nil
         collectionView.reloadData()
     }
 

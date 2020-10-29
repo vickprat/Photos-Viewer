@@ -20,14 +20,11 @@ final class PhotoSearchPresenter: PhotoSearchPresenterInput, PhotoSearchViewOutp
     var totalPages = Constants.defaultPageNum
 
     var isMoreDataAvailable: Bool {
-        guard totalPages != 0 else {
-            return true
-        }
+        guard totalPages != 0 else { return true }
         return pageNum < totalPages
     }
 
     func searchPhotos(with imageName: String) {
-        cancelAllDownload()
         guard isMoreDataAvailable else { return }
         view?.changeViewState(.loading)
         pageNum += 1
@@ -83,12 +80,9 @@ final class PhotoSearchPresenter: PhotoSearchPresenterInput, PhotoSearchViewOutp
         totalCount = Constants.defaultTotalCount
         totalPages = Constants.defaultTotalCount
         photoSearchViewModel = nil
+        ImageDownloader.shared.cancelAll()
         view?.resetViews()
         view?.changeViewState(.none)
-    }
-
-    func cancelAllDownload() {
-        ImageDownloader.shared.cancelAll()
     }
 }
 
