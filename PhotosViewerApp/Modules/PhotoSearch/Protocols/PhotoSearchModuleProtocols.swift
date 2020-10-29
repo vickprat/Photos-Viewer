@@ -21,6 +21,7 @@ protocol PhotoSearchViewOutput: AnyObject {
     var isMoreDataAvailable: Bool { get }
     func clearData()
     func didSelectPhoto(at index: Int)
+    func didEndDisplayingItem(at index: Int)
 }
 
 protocol PhotoSearchPresenterInput: AnyObject {

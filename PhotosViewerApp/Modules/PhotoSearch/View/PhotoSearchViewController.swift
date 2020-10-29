@@ -123,7 +123,6 @@ final class PhotoSearchViewController: UIViewController, PhotoSearchViewInput, S
 
         self.searchText = searchText
         searchController.searchBar.text = searchText
-        ImageDownloader.shared.cancelAll()
         presenter.searchPhotos(with: searchText)
     }
 }
@@ -152,9 +151,7 @@ extension PhotoSearchViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let viewModel = photoSearchViewModel else { return }
         guard viewState != .loading, indexPath.row == (viewModel.photoCount - 1) else { return }
-        if let photoURL = viewModel.photoUrlAt(indexPath.row) {
-            ImageDownloader.shared.changeDownloadPriority(for: photoURL)
-        }
+        presenter.didEndDisplayingItem(at: indexPath.row)
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

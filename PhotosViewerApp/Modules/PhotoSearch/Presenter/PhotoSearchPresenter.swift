@@ -27,6 +27,7 @@ final class PhotoSearchPresenter: PhotoSearchPresenterInput, PhotoSearchViewOutp
     }
 
     func searchPhotos(with imageName: String) {
+        cancelAllDownload()
         guard isMoreDataAvailable else { return }
         view?.changeViewState(.loading)
         pageNum += 1
@@ -71,6 +72,12 @@ final class PhotoSearchPresenter: PhotoSearchPresenterInput, PhotoSearchViewOutp
         }
     }
 
+    func didEndDisplayingItem(at index: Int) {
+        if let photoURL = photoSearchViewModel.photoUrlAt(index) {
+            ImageDownloader.shared.changeDownloadPriority(for: photoURL)
+        }
+    }
+
     func clearData() {
         pageNum = Constants.defaultPageNum
         totalCount = Constants.defaultTotalCount
@@ -78,6 +85,10 @@ final class PhotoSearchPresenter: PhotoSearchPresenterInput, PhotoSearchViewOutp
         photoSearchViewModel = nil
         view?.resetViews()
         view?.changeViewState(.none)
+    }
+
+    func cancelAllDownload() {
+        ImageDownloader.shared.cancelAll()
     }
 }
 
