@@ -16,7 +16,7 @@ enum Strings {
     static let ok = "Ok"
     static let retry = "Retry"
     static let error = "Error"
-    static let close = "close"
+    static let close = "Close"
 }
 
 //MARK: Numeric Constants

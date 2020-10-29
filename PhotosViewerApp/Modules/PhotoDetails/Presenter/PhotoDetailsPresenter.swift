@@ -19,11 +19,15 @@ final class PhotoDetailsPresenter: PhotoDetailsPresenterInput, PhotoDetailsViewO
     }
 
     func onViewDidLoad() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [weak self] in
-            guard let self = self else {
-                return
+        let url = "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_z.jpg"
+        guard let photoUrl = URL(string: url) else {
+            view?.updateView(with: UIImage(named: "placeholderImage"))
+            return
+        }
+        ImageDownloader.shared.downloadImage(withURL: photoUrl, indexPath: nil) { [weak self] (image, _, _, error) in
+            if let photo = image {
+                self?.view?.updateView(with: photo)
             }
-            self.view?.renderView(with: self.photo)
         }
     }
 

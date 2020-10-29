@@ -8,7 +8,7 @@
 import UIKit
 
 protocol PhotoDetailsViewInput: AnyObject {
-    func renderView(with photo: Photo)
+    func updateView(with image: UIImage?)
 }
 
 protocol PhotoDetailsViewOutput: AnyObject {
