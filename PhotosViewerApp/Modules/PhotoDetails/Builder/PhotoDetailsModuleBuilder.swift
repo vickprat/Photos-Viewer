@@ -11,7 +11,7 @@ final class PhotoDetailsModuleBuilder {
 
     func build(with photo: Photo) -> PhotoDetailsViewController {
         let detailsViewController = PhotoDetailsViewController()
-        let presenter = PhotoDetailsPresenter(photo: photo)
+        let presenter = PhotoDetailsPresenter(with: photo)
         let router = PhotoDetailsRouter()
 
         presenter.view = detailsViewController

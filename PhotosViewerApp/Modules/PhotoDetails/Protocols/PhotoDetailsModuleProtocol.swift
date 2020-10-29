@@ -7,6 +7,20 @@
 
 import UIKit
 
+protocol PhotoDetailsViewInput: AnyObject {
+    func renderView(with photo: Photo)
+}
+
+protocol PhotoDetailsViewOutput: AnyObject {
+   func didTapClose()
+   func onViewDidLoad()
+}
+
+protocol PhotoDetailsPresenterInput: AnyObject {
+    var view: PhotoDetailsViewInput? { get set }
+    var router: PhotoDetailsRouterInput! { get set }
+}
+
 protocol PhotoDetailsRouterInput: AnyObject {
     func dismiss()
 }
