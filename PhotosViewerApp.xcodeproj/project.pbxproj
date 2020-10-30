@@ -11,7 +11,6 @@
 		353F7F9925484D9B001644B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F7F9825484D9B001644B2 /* AppDelegate.swift */; };
 		353F7FA225484D9D001644B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353F7FA125484D9D001644B2 /* Assets.xcassets */; };
 		353F7FA525484D9D001644B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353F7FA325484D9D001644B2 /* LaunchScreen.storyboard */; };
-		353F7FB025484D9D001644B2 /* PhotosViewerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F7FAF25484D9D001644B2 /* PhotosViewerAppTests.swift */; };
 		353F7FBB25484D9D001644B2 /* PhotosViewerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F7FBA25484D9D001644B2 /* PhotosViewerAppUITests.swift */; };
 		353F7FD525484F83001644B2 /* PhotoSearchModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F7FD425484F83001644B2 /* PhotoSearchModuleBuilder.swift */; };
 		353F7FDE2548507A001644B2 /* PhotoSearchModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F7FDD2548507A001644B2 /* PhotoSearchModuleProtocols.swift */; };
@@ -35,6 +34,8 @@
 		3556227C254AE2A2000F5B96 /* PhotoDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3556227B254AE2A2000F5B96 /* PhotoDetailsPresenter.swift */; };
 		3556228A254AE2C1000F5B96 /* PhotoDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35562289254AE2C1000F5B96 /* PhotoDetailsRouter.swift */; };
 		3556228F254AE2D0000F5B96 /* PhotoDetailsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3556228E254AE2D0000F5B96 /* PhotoDetailsModuleBuilder.swift */; };
+		35683837254BC586006DD370 /* TestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 35683836254BC586006DD370 /* TestData.json */; };
+		356839EC254BDEFD006DD370 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356839EB254BDEFD006DD370 /* APIClientMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +63,6 @@
 		353F7FA425484D9D001644B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		353F7FA625484D9D001644B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		353F7FAB25484D9D001644B2 /* PhotosViewerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotosViewerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		353F7FAF25484D9D001644B2 /* PhotosViewerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewerAppTests.swift; sourceTree = "<group>"; };
 		353F7FB125484D9D001644B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		353F7FB625484D9D001644B2 /* PhotosViewerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotosViewerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		353F7FBA25484D9D001644B2 /* PhotosViewerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewerAppUITests.swift; sourceTree = "<group>"; };
@@ -89,6 +89,8 @@
 		3556227B254AE2A2000F5B96 /* PhotoDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsPresenter.swift; sourceTree = "<group>"; };
 		35562289254AE2C1000F5B96 /* PhotoDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsRouter.swift; sourceTree = "<group>"; };
 		3556228E254AE2D0000F5B96 /* PhotoDetailsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsModuleBuilder.swift; sourceTree = "<group>"; };
+		35683836254BC586006DD370 /* TestData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestData.json; sourceTree = "<group>"; };
+		356839EB254BDEFD006DD370 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +173,9 @@
 		353F7FAE25484D9D001644B2 /* PhotosViewerAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				353F7FAF25484D9D001644B2 /* PhotosViewerAppTests.swift */,
 				353F7FB125484D9D001644B2 /* Info.plist */,
+				35683836254BC586006DD370 /* TestData.json */,
+				356839EB254BDEFD006DD370 /* APIClientMock.swift */,
 			);
 			path = PhotosViewerAppTests;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35683837254BC586006DD370 /* TestData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,7 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				353F7FB025484D9D001644B2 /* PhotosViewerAppTests.swift in Sources */,
+				356839EC254BDEFD006DD370 /* APIClientMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
