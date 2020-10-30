@@ -37,6 +37,7 @@
 		3568381C254BC1AC006DD370 /* PhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568381B254BC1AC006DD370 /* PhotosTests.swift */; };
 		35683824254BC1C0006DD370 /* PhotoSearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35683823254BC1C0006DD370 /* PhotoSearchInteractorTests.swift */; };
 		35683829254BC1D2006DD370 /* PhotoSearchBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35683828254BC1D2006DD370 /* PhotoSearchBuilderTests.swift */; };
+		3568382E254BC1E5006DD370 /* PhotoSearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568382D254BC1E5006DD370 /* PhotoSearchPresenterTests.swift */; };
 		35683837254BC586006DD370 /* TestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 35683836254BC586006DD370 /* TestData.json */; };
 		356839EC254BDEFD006DD370 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356839EB254BDEFD006DD370 /* APIClientMock.swift */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		3568381B254BC1AC006DD370 /* PhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTests.swift; sourceTree = "<group>"; };
 		35683823254BC1C0006DD370 /* PhotoSearchInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchInteractorTests.swift; sourceTree = "<group>"; };
 		35683828254BC1D2006DD370 /* PhotoSearchBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchBuilderTests.swift; sourceTree = "<group>"; };
+		3568382D254BC1E5006DD370 /* PhotoSearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchPresenterTests.swift; sourceTree = "<group>"; };
 		35683836254BC586006DD370 /* TestData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestData.json; sourceTree = "<group>"; };
 		356839EB254BDEFD006DD370 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -373,6 +375,7 @@
 				3568381B254BC1AC006DD370 /* PhotosTests.swift */,
 				35683823254BC1C0006DD370 /* PhotoSearchInteractorTests.swift */,
 				35683828254BC1D2006DD370 /* PhotoSearchBuilderTests.swift */,
+				3568382D254BC1E5006DD370 /* PhotoSearchPresenterTests.swift */,
 			);
 			path = PhotoSearch;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35683824254BC1C0006DD370 /* PhotoSearchInteractorTests.swift in Sources */,
+				3568382E254BC1E5006DD370 /* PhotoSearchPresenterTests.swift in Sources */,
 				35683829254BC1D2006DD370 /* PhotoSearchBuilderTests.swift in Sources */,
 				3568381C254BC1AC006DD370 /* PhotosTests.swift in Sources */,
 				356839EC254BDEFD006DD370 /* APIClientMock.swift in Sources */,
