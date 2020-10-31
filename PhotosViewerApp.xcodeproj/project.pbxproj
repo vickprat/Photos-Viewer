@@ -36,6 +36,8 @@
 		3556227C254AE2A2000F5B96 /* PhotoDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3556227B254AE2A2000F5B96 /* PhotoDetailsPresenter.swift */; };
 		3556228A254AE2C1000F5B96 /* PhotoDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35562289254AE2C1000F5B96 /* PhotoDetailsRouter.swift */; };
 		3556228F254AE2D0000F5B96 /* PhotoDetailsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3556228E254AE2D0000F5B96 /* PhotoDetailsModuleBuilder.swift */; };
+		355F8C27254D3F2400D2CCA0 /* Screen Shot 2020-10-31 at 11.17.54.png in Resources */ = {isa = PBXBuildFile; fileRef = 355F8C25254D3F2400D2CCA0 /* Screen Shot 2020-10-31 at 11.17.54.png */; };
+		355F8C28254D3F2400D2CCA0 /* Screen Shot 2020-10-31 at 11.17.26.png in Resources */ = {isa = PBXBuildFile; fileRef = 355F8C26254D3F2400D2CCA0 /* Screen Shot 2020-10-31 at 11.17.26.png */; };
 		3568381C254BC1AC006DD370 /* PhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568381B254BC1AC006DD370 /* PhotosTests.swift */; };
 		35683824254BC1C0006DD370 /* PhotoSearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35683823254BC1C0006DD370 /* PhotoSearchInteractorTests.swift */; };
 		35683829254BC1D2006DD370 /* PhotoSearchBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35683828254BC1D2006DD370 /* PhotoSearchBuilderTests.swift */; };
@@ -97,6 +99,8 @@
 		3556227B254AE2A2000F5B96 /* PhotoDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsPresenter.swift; sourceTree = "<group>"; };
 		35562289254AE2C1000F5B96 /* PhotoDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsRouter.swift; sourceTree = "<group>"; };
 		3556228E254AE2D0000F5B96 /* PhotoDetailsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsModuleBuilder.swift; sourceTree = "<group>"; };
+		355F8C25254D3F2400D2CCA0 /* Screen Shot 2020-10-31 at 11.17.54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2020-10-31 at 11.17.54.png"; sourceTree = "<group>"; };
+		355F8C26254D3F2400D2CCA0 /* Screen Shot 2020-10-31 at 11.17.26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2020-10-31 at 11.17.26.png"; sourceTree = "<group>"; };
 		3568381B254BC1AC006DD370 /* PhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTests.swift; sourceTree = "<group>"; };
 		35683823254BC1C0006DD370 /* PhotoSearchInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchInteractorTests.swift; sourceTree = "<group>"; };
 		35683828254BC1D2006DD370 /* PhotoSearchBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchBuilderTests.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 		353F7F9725484D9B001644B2 /* PhotosViewerApp */ = {
 			isa = PBXGroup;
 			children = (
+				355F8C24254D3F1300D2CCA0 /* Screenshots */,
 				353F7FA625484D9D001644B2 /* Info.plist */,
 				3527E19525489A5A0001622A /* Resources */,
 				3527E19325489A410001622A /* Application */,
@@ -381,6 +386,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		355F8C24254D3F1300D2CCA0 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				355F8C26254D3F2400D2CCA0 /* Screen Shot 2020-10-31 at 11.17.26.png */,
+				355F8C25254D3F2400D2CCA0 /* Screen Shot 2020-10-31 at 11.17.54.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		35683819254BBF6A006DD370 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,6 +519,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				353F7FA525484D9D001644B2 /* LaunchScreen.storyboard in Resources */,
+				355F8C28254D3F2400D2CCA0 /* Screen Shot 2020-10-31 at 11.17.26.png in Resources */,
+				355F8C27254D3F2400D2CCA0 /* Screen Shot 2020-10-31 at 11.17.54.png in Resources */,
 				353F7FA225484D9D001644B2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
