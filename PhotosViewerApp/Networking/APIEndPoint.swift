@@ -29,26 +29,21 @@ extension APIEndPoint {
 }
 
 protocol URLRequestConvertible {
-    func asURLRequest() -> URLRequest
+    func asURLRequest() -> URLRequest?
 }
 
 extension URLRequestConvertible where Self: APIEndPoint {
 
-    func asURLRequest() -> URLRequest {
+    func asURLRequest() -> URLRequest? {
         var components = URLComponents(string: baseURL.absoluteString)
         components?.path = path
         components?.queryItems = queryItems(from: parameters)
 
-        if let url = components?.url {
-            var request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10)
-            request.httpMethod = method.rawValue
-            request.setHeaders(headers)
-            return request
-        } else {
-            // It could be done in a better way.
-            let url = URL(fileURLWithPath: "unknownn")
-            return URLRequest.init(url: url)
-        }
+        guard let url = components?.url else { return nil }
+        var request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10)
+        request.httpMethod = method.rawValue
+        request.setHeaders(headers)
+        return request
     }
 
     func queryItems(from params: [String: Any]) -> [URLQueryItem] {

@@ -33,7 +33,7 @@ final class APIClient: NetworkService {
 
     @discardableResult
     func dataRequest<T: Decodable>(_ endPoint: APIEndPoint, objectType: T.Type, completion: @escaping (Result<T, Error>) -> Void) -> URLSessionDataTask {
-        let request = endPoint.asURLRequest()
+        guard let request = endPoint.asURLRequest() else { return session.dataTask(with: URL(string: "www.google.com")!) }
         let dataTask = session.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 completion(Result.failure(error))
