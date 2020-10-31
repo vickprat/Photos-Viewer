@@ -14,12 +14,13 @@ Used VIPER architecture to build this app. Lot of reasons to use VIPER architect
 While using VIPER architecture, I only create the classes if there is really a need to create that class out of all the classes "View", "Interactor", "Presenter", "Entity", "Router".
 
 # UI
-No xibs or storyboards are used to create UI.
+No xibs or storyboards are used to create UI and all the constraints are setup programmatically as it's become easier to do the code review and also makes sense if we want to do the collaboration in developing this app.
 
 # Testing
 Tests have been added to increase the code coverage and the current code coverage is 20%.
 
 # What's next
-1. Better UI by adding some cool animations.
-2. More details can be shown on the photo details screen.
+1. Better UI by adding some cool animation while loading the images like Shimmer Effect.
+2. More details about the photo can be shown on the photo details screen.
 3. UI tests and other unit tests should be added to increase the test coverage.
+4. User defaults can be used to save the top 10 searches by the user.
