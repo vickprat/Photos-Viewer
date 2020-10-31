@@ -11,6 +11,7 @@ import UIKit
 
 final class APIClientMock: NetworkService {
 
+    @discardableResult
     func dataRequest<T>(_ endPoint: APIEndPoint, objectType: T.Type, completion: @escaping (Result<T, Error>) -> Void) -> URLSessionDataTask where T : Decodable {
         if case PhotoSearchAPI.search(query: "nature", page: 1) = endPoint {
             let bundle = Bundle(for: type(of: self))
@@ -25,9 +26,10 @@ final class APIClientMock: NetworkService {
             let error = NSError.init(domain: "Empty data", code: 0, userInfo: nil)
             completion(Result.failure(error))
         }
-        return URLSessionDataTask()
+        return URLSession.shared.dataTask(with: URL(string: "www.google.com")!)
     }
 
+    @discardableResult
     func downloadRequest(_ url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) -> URLSessionDownloadTask {
         if url.absoluteString == "https://farm2.static.flickr.com/100/12345_/12345.jpg" {
             let image = UIImage(named: "placeholderImage")!
@@ -36,7 +38,6 @@ final class APIClientMock: NetworkService {
             let error = NSError.init(domain: "Something went wrong", code: 0, userInfo: nil)
             completion(Result.failure(error))
         }
-
-        return URLSessionDownloadTask()
+        return URLSession.shared.downloadTask(with: URL(string: "www.google.com")!)
     }
 }
