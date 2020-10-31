@@ -1,6 +1,11 @@
 # Photos-Viewer
 A photo viewer app that fetches photos from a 3rd party photo-sharing service Flickr and shows the results in a 3-column collection view.
 
+# Screenshots
+Photo Search Screen | Photo Details Screen
+:-------------------------:|:-------------------------:
+![image](https://github.com/vickprat/Photos-Viewer/blob/master/PhotosViewerApp/Screenshots/Screen%20Shot%202020-10-31%20at%2011.17.26.png) | ![image](https://github.com/vickprat/Photos-Viewer/blob/master/PhotosViewerApp/Screenshots/Screen%20Shot%202020-10-31%20at%2011.17.54.png)
+
 # Minimum Requirements
 Only Xcode 12.1 is required. No third party libraries are used. So it's very easy to build and run the project and also the build time is very less. Just clone the project, open the .xcodeproj file in Xcode and run it.
 
